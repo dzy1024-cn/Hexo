@@ -1,0 +1,37 @@
+{
+  "name": "hexo-theme-plata",
+  "version": "0.1.5",
+  "description": "A Hexo theme based on Material Design Lite.",
+  "main": "package.json",
+  "files": [
+    "docs",
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "_config.yml"
+  ],
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breeze256/hexo-theme-plata.git"
+  },
+  "keywords": [
+    "hexo",
+    "theme",
+    "material"
+  ],
+  "author": "breeze256",
+  "license": "MIT",
+  "devDependencies": {
+    "c8": "10.1.2",
+    "chai": "4.5.0",
+    "eslint": "9.14.0",
+    "hexo": "7.3.0",
+    "js-yaml": "4.1.0",
+    "mocha": "10.8.2",
+    "stylelint": "16.10.0"
+  }
+}

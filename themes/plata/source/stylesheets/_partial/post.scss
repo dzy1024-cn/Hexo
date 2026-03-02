@@ -1,0 +1,64 @@
+/**
+ * post.scss - Post entry and content style in hexo-theme-flat.
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
+
+@use "../_library/palette" as *;
+@use "../_library/font.scss" as *;
+
+// Entry style.
+.post-entry {
+	width: 100%;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+  margin-bottom: 20px;
+  // background-color: $primary-bg-color;
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-default-bg-color");
+}
+
+// Content in the entry.
+.post-entry__content {
+	padding: 40px;
+}
+
+// Title in the entry.
+.post-entry__title a {
+  font-weight: 300;
+  font-family: $primaryFonts;
+	font-size: 32px;
+  text-decoration: none;
+  @include use-color("color", "md-primary-fg-color");
+}
+
+// Post content.
+.post-content {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,.2);
+  max-width: -moz-available;
+  max-width: -webkit-fill-available;
+  @media screen and (min-width: 1025px) {
+    padding: 40px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding: 2.8rem;
+  }
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-default-bg-color");
+}
+
+// Information button of the post.
+.post-content__top-button {
+  @media screen and (min-width: 1025px) {
+    position: absolute;
+    right: 40px;
+    top: 110px;
+  }
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    right: 3.86rem;
+    top: 2.86rem;
+  }
+}

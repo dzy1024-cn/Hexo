@@ -1,0 +1,43 @@
+# Plata configuration.
+
+# Allow to cache content generation.
+cache:
+  enable: true
+
+# User Interface configuration.
+interface:
+  slogan: "Write your own slogan."
+
+# Site menu & navigation.
+menu:
+  home: "/"
+  archives: "/archives"
+  about: 
+
+# Author's information. TODO.
+# author:
+#   avatar: ""
+#   sign: ""
+
+# Custom assets folders. DO NOT EDIT if you don't know what is this.
+assets:
+  css: stylesheets
+  js: javascripts
+  imgs: images
+
+
+# Aplayer settings.
+aplayer:
+  enable: true
+  id: 158010361 # List ID.
+  server: netease
+  type: playlist
+  autoplay: true
+  order: random
+  volume: 0.55
+  theme: #cc543a
+  preload: auto
+
+# Output style of hexo-renderer-dartsass.
+sass:
+  outputStyle: expanded # "expanded" or "compressed".

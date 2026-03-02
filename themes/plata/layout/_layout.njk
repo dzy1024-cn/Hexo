@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+  <!-- HTML head, it contains style files and site information. -->
+  <head>
+    {{ partial("_partials/head.njk", {}, {cache: theme.cache.enable}) }}
+    <!-- Add page title. -->
+    <title>
+      {{ config.title }}
+      {%- if page.title %} | {{ page.title }} {%- endif %}
+    </title>
+
+
+  </head>
+
+  <!-- Load pjax. -->
+  {# {%- if theme.pjax %}
+    {{ partial("_widgets/pjax.njk", {}, {cache: theme.cache.enable}) }}
+  {%- endif %} #}
+
+  <!-- HTML body. -->
+  <body>
+
+    <!-- No header, and the drawer stays open on larger screens. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer site-layout">
+
+      <!-- Drawer layout. This part can be seen as "header". -->
+      <div class="mdl-layout__drawer site-drawer">
+        {{ partial("_partials/drawer.njk", {}, {cache: theme.cache.enable}) }}
+      </div>
+
+      <!-- Main content, extended in specific pages. -->
+      <main id="content" class="mdl-layout__content content-container">
+        {% block content %}{% endblock %}
+      </main>
+      {# <div id="loading" style="display: none;">
+        <div class="loader"></div>
+      </div> #}
+
+
+    </div>
+
+
+
+    <!-- Footer js. -->
+    <script src="{{ url_for(theme.assets.js) }}/waiter.js"></script>
+    {{ partial("_partials/footer.njk", {}, {cache: theme.cache.enable}) }}
+  </body>
+</html>

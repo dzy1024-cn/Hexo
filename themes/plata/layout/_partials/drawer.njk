@@ -1,0 +1,62 @@
+<!-- Site title in drawer. -->
+<span class="mdl-layout-title site-drawer__title">
+  {{ config.title }}
+</span>
+
+<!-- Site slogan. -->
+<p class="site-drawer__slogan">
+  {{ theme.interface.slogan }}
+  </br>
+</p>
+
+<!-- Loading elements. -->
+{%- if not theme.pjax %}
+  {# <p class="site-drawer__loading-tip">
+    LOADING...
+  </p> #}
+{%- endif %}
+
+<!-- Dividing line in the drawer. -->
+<hr class="site-drawer__hr" />
+
+<!-- Site navigation (menu). -->
+<nav class="mdl-navigation site-drawer__menu">
+  {%- if theme.menu.home %}
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.home }}>
+	    <span class="iconify md-24" data-icon="mdi-home"></span>
+	    {{ __("menu.home") }}
+    </a>
+  {%- endif %}
+
+  <!-- Archives item. -->
+  {%- if theme.menu.archives %}
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.archives }}>
+      <span class="iconify md-24" data-icon="mdi-box-down"></span>
+      {{ __("menu.archives") }}
+    </a>
+  {%- endif %}
+
+  <!-- About page. -->
+  {%- if theme.menu.about %}
+    <a class="mdl-navigation__link site-drawer__menu__link" href={{ theme.menu.about }}>
+      <span class="iconify md-24" data-icon="mdi-information-slab-circle"></span>
+      {{ __("menu.about") }}
+    </a>
+  {%- endif %}
+
+</nav>
+
+<!-- Footer. -->
+<div class="site-drawer__footer">
+  {%- if config.feed %}
+<p class="site-drawer__footer__rss">
+  <a class="site-drawer__footer__link" href={{ config.feed.path }}>RSS</a>
+  <span class="iconify md-18" data-icon="mdi-rss-box"></span>
+</p>
+{%- endif %}
+  Powered by
+  <a
+    class="site-drawer__footer__link" 
+    href="https://github.com/breeze256/hexo-theme-plata"
+  >Plata theme</a>.
+</div>

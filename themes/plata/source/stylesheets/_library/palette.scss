@@ -1,0 +1,63 @@
+/* palette.scss */
+@use "sass:map";
+
+$schemes: (
+  // Light scheme.
+  LightScheme: (
+    // Primary color shades.
+    md-primary-fg-color:               hsla(200, 18%, 46%, 1),
+    md-primary-fg-color--light:        hsla(200, 15%, 54%, 1),
+    md-primary-fg-color--dark:         hsla(199, 18%, 33%, 1),
+    md-primary-bg-color:               hsla(0, 0%, 96%, 1),
+    md-primary-bg-color--light:        hsla(0, 0%, 96%, 0.7),
+
+    // Default color shades.
+    md-default-fg-color:               hsla(0, 0%, 0%, 0.65),
+    md-default-fg-color--light:        hsla(0, 0%, 0%, 0.54),
+    md-default-fg-color--lighter:      hsla(0, 0%, 0%, 0.32),
+    md-default-fg-color--lightest:     hsla(0, 0%, 0%, 0.07),
+    md-default-bg-color:               hsla(0, 0%, 100%, 1),
+    md-default-bg-color--light:        hsla(0, 0%, 100%, 0.7),
+    md-default-bg-color--lighter:      hsla(0, 0%, 100%, 0.3),
+    md-default-bg-color--lightest:     hsla(0, 0%, 100%, 0.12),
+
+    // Accent color shades.
+    md-accent-fg-color:                hsla(199, 18%, 33%, 1),
+    md-accent-fg-color--transparent:   hsla(199, 18%, 33%, 0.1),
+    md-accent-bg-color:                hsla(0, 0%, 100%, 1),
+    md-accent-bg-color--light:         hsla(0, 0%, 100%, 0.7),
+  ),
+  // Dark scheme.
+  DarkScheme: (
+    // Primary color shades.
+    md-primary-fg-color:               hsla(174, 42%, 51%, 1),
+    md-primary-fg-color--light:        hsla(165, 82%, 51%, 1),
+    md-primary-fg-color--dark:         hsla(173, 100%, 24%, 1),
+    md-primary-bg-color:               hsla(200, 19%, 18%, 1),
+    md-primary-bg-color--light:        hsla(200, 19%, 18%, 0.7),
+
+    // Default color shades.
+    md-default-fg-color:               hsla(180, 100%, 97%, 0.87),
+    md-default-fg-color--light:        hsla(180, 100%, 97%, 0.54),
+    md-default-fg-color--lighter:      hsla(180, 100%, 97%, 0.32),
+    md-default-fg-color--lightest:     hsla(180, 100%, 97%, 0.07),
+    md-default-bg-color:               hsla(201, 19%, 15%, 1),
+    md-default-bg-color--light:        hsla(201, 19%, 15%, 0.7),
+    md-default-bg-color--lighter:      hsla(201, 19%, 15%, 0.3),
+    md-default-bg-color--lightest:     hsla(201, 19%, 15%, 0.12),
+
+    // Accent color shades.
+    md-accent-fg-color:                hsla(165, 82%, 51%, 1),
+    md-accent-fg-color--transparent:   hsla(165, 82%, 51%, 0.1),
+    md-accent-bg-color:                hsla(200, 19%, 18%, 1),
+    md-accent-bg-color--light:         hsla(200, 19%, 18%, 0.7),
+  )
+);
+
+// Mixin for better dark mode.
+@mixin use-color($property, $colorKey) {
+  & {#{$property}: map.get(map.get($schemes, LightScheme), $colorKey);}
+  @media (prefers-color-scheme: dark) {
+    #{$property}: map.get(map.get($schemes, DarkScheme), $colorKey);
+  }
+}

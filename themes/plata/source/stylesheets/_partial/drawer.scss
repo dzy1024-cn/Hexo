@@ -1,0 +1,98 @@
+/**
+ * drawer.scss - Drawer style for flat.
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
+
+@use "../_library/palette" as *;
+@use "../_library/font" as *;
+
+// Main style.
+.site-drawer {
+  @media screen and (min-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    padding: 120px 40px 0px 0px;
+	  min-width: 330px;
+    min-height: 100vh;
+    box-shadow: none;
+    background: none;
+    border: none;
+  }
+  @media screen and (max-width: 1024px) {
+    @include use-color("background-color", "md-default-bg-color");
+  }
+}
+
+// Drawer & site title.
+.site-drawer__title {
+  font-weight: 300;
+  @media screen and (min-width: 1025px) {
+    line-height: 40px;
+    font-size: 25px;
+  }
+  @media screen and (max-width: 1024px) {
+    line-height: 2.8rem;
+    padding-top: 1.5rem;
+    font-size: 1.8rem;
+  }
+  @include use-color("color", "md-primary-fg-color");
+}
+
+// Site slogan.
+.site-drawer__slogan {
+  font-weight: 300;
+  @media screen and (min-width: 1025px) {
+    padding-left: 40px;
+		line-height: 50px;
+		font-size: 17px;
+  }
+  @media screen and (max-width: 1024px) {
+    padding-left: 1.2rem;
+		line-height: 3.6rem;
+		font-size: 1.2rem;
+  }
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+.site-drawer__loading-tip {
+  padding-left: 40px;
+  font-family: $codeFonts;
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+// The dividing line in the drawer.
+.site-drawer__hr {
+  @media screen and (min-width: 1025px) {
+    margin: 1em 200px 1em 40px;
+  }
+  @include use-color("color", "md-default-fg-color--lighter");
+}
+
+// Drawer menu style.
+.site-drawer__menu {
+  flex-grow: 1;
+}
+
+.site-drawer__menu__link {
+  @include use-color("color", "md-default-fg-color");
+}
+
+// Drawer footer.
+.site-drawer__footer {
+  font-family: $codeFonts;
+  padding: 40px;
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+.site-drawer__footer__link {
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.site-drawer__footer__rss {
+  line-height: 14px;
+  @include use-color("color", "md-primary-fg-color");
+}

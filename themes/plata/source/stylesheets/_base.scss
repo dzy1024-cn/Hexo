@@ -1,0 +1,113 @@
+/**
+ * _base.scss - Web basic style in hexo-theme-flat.
+ * @license MIT
+ * @copyright 2024 breeze256
+ */
+
+@use "_library/palette" as *;
+@use "_library/font" as *;
+
+// Body part.
+body, html {
+  font-family: $primaryFonts;
+  z-index: -1;
+  overflow: hidden;
+  @include use-color("color", "md-default-fg-color");
+  @include use-color("background-color", "md-primary-bg-color");
+	// background-color: $primary-bg-color;
+}
+
+pre, kbd {
+  font-family: $codeFonts;
+}
+
+// Accent color.
+a {
+  @include use-color("color", "md-primary-fg-color");
+}
+
+// Title.
+h1 {
+  font-family: $primaryFonts;
+	font-weight: 300;
+  @include use-color("color", "md-primary-fg-color");
+}
+
+h2 {
+	font-size: 40px;
+	border-bottom: 1px solid #EAE8ED;
+	padding: 0 0 3px;
+}
+
+// Figure.
+img {
+  max-width: 100%;
+}
+
+// Figure caption.
+figcaption {
+  font-family: $codeFonts;
+  text-align: center;
+}
+
+// Blockquote.
+blockquote::before {
+  display: none;
+}
+
+blockquote::after {
+  display: none;
+}
+
+blockquote {
+  font-family: serif, $primaryFonts;
+  margin-left: 0px;
+  padding-left: 30px;
+  border-left: rgba(0,0,0,.1) 5px solid;
+}
+
+// We just change some necessary elements in Material Design Lite.
+.mdl-list__item-icon.material-icons {
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  @include use-color("background-color", "md-accent-fg-color--transparent");
+}
+
+.mdl-layout__drawer-button {
+  @include use-color("color", "md-default-fg-color--light");
+}
+
+.floating-element {
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+// Rules for sizing the icon.
+
+.iconify.md-18 {
+  height: 18px;
+  width: 18px
+}
+
+.iconify.md-24 {
+  height: 24px;
+  width: 24px
+}
+
+.iconify.md-36 {
+  height: 36px;
+  width: 36px
+}
+
+.iconify.md-48 {
+  height: 48px;
+  width: 48px
+}
