@@ -12,13 +12,13 @@ base_info:
   primary_color: "#0066cc"
 
   # Blog website title
-  title: Keep Theme
+  title: Jcat's Personal Blog
 
   # Blog website author name
-  author: Keep Team
+  author: Jcat
 
   # Author avatar, You can use local image path or image link
-  avatar: /images/avatar.svg
+  avatar: /images/avatar.jpeg
 
   # Website LOGO, You can use local image path or image link
   logo: /images/logo.svg
