@@ -103,6 +103,11 @@ theme: keep
 deploy:
   type: ''
   
+# Security
+##
+encrypt:
+    enable: true
+
 katex:
   enable: true
   jsConfig:
