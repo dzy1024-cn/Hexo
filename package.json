@@ -12,7 +12,7 @@
     "version": "8.1.1"
   },
   "dependencies": {
-    "hexo": "^8.0.0",
+    "hexo": "^8.1.2",
     "hexo-admonition": "^1.1.2",
     "hexo-blog-encrypt": "^3.1.9",
     "hexo-filter-katex": "^1.1.0",
