@@ -13,8 +13,10 @@
   },
   "dependencies": {
     "hexo": "^8.0.0",
+    "hexo-admonition": "^1.1.2",
     "hexo-blog-encrypt": "^3.1.9",
     "hexo-filter-katex": "^1.1.0",
+    "hexo-fold": "^1.0.5",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^4.0.0",

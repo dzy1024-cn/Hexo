@@ -164,6 +164,8 @@ code_block:
   tools:
     enable: true            # Option values: true | false
     style: default           # Option values: default | mac
+    collapse: true  # <--- 手动添加这一行，开启代码块折叠功能
+    copy: true
   highlight_theme: default   # Option values: default | obsidian
 
 
